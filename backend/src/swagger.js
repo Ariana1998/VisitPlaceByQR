@@ -5,9 +5,9 @@ const swaggerUi = require("swagger-ui-express");
 const options = {
   definition: {
     openapi: "3.0.0",
-    info: { title: "Registros de Entrada y Salidas por QR", version: "1.0.0" },
+    info: { title: "Visit Place By QR", version: "1.0.0" },
   },
-  apis: ["../backend/routes/administrador.js", "../backend/routes/categoria.js", "../backend/routes/lugar.js", "../routes/registroVisitante.js" , "../routes/visitante.js"],
+  apis: ["../backend/routes/administrador.js", "../backend/routes/categoria.js", "../backend/routes/lugar.js", "../backend/routes/registroVisitante.js" , "../backend/routes/visitante.js"],
 };
 
 // Docs in JSON format

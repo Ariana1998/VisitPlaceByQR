@@ -5,12 +5,12 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
 /**
  * @swagger
  * tags:
- *   name: Visitantes
+ *   name: Visitante
  *   description: Encargado de gestionar los Visitantes
- * /Visitantes:
+ * /visitante:
  *   get:
  *     summary: Lista de todos los Visitantes
- *     tags: [Visitantes]
+ *     tags: [Visitante]
  *     responses:
  *       200:
  *         description: Se encarga de traer la lista de los usuarios
@@ -22,7 +22,7 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *                 $ref: '#/components/schemas/Visitante'
  *   post:
  *     summary: Crea un nuevo Visitante
- *     tags: [Visitantes]
+ *     tags: [Visitante]
  *     requestBody:
  *       required: true
  *       content:
@@ -38,11 +38,29 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *               $ref: '#/components/schemas/Visitante'
  *       500:
  *         description: Some server error
- * 
- * 
+ * /visitante/{id}:
+ *   get:
+ *     summary: Obtener a un visitante por medio de su ID
+ *     tags: [Visitante]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: id del visitante
+ *     responses:
+ *       200:
+ *         description: Devuelve el visitante por su ID
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Visitante'
+ *       404:
+ *         description: Visitante was not found
  *   delete:
  *     summary: Elimina el Visitante
- *     tags: [Visitantes]
+ *     tags: [Visitante]
  *     parameters:
  *       - in: path
  *         name: id
@@ -50,14 +68,34 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *           type: string
  *         required: true
  *         description: Manda un mensaje notificando que el Visitante fue eliminado
- *
  *     responses:
  *       200:
  *         description: El Visitante fue eliminado
  *       404:
  *         description: Visitante no encontrado
+ * /visitante/login:
+ *   post:
+ *     summary: Inicia Sesión
+ *     tags: [Visitante]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             example: {"email":"Ariana@gmail.com", "password":"skajdñsdlkjdfñkldjaklsñdjs"}
+ *     responses:
+ *       200:
+ *         description: Manda Si inicio sesión o no
+ *         content:
+ *           application/json:
+ *             schema:
+ *               example: {"message": "Inicio de sesion correcto"}
+ *       500:
+ *         description: Some server error
+ * 
  */
 /**
+ * 
  * @swagger
  * components:
  *   schemas:

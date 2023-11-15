@@ -6,14 +6,14 @@ const {getCategorias, createCategoria, getCategoria, updateCategoria, deleteCate
  * @swagger
  * tags:
  *   name: Categoria
- *   description: El gestor de las Categorias
+ *   description: Gestor de las Categorias
  * /categorias:
  *   get:
- *     summary: Devuelve una lista de todas las Categorias
+ *     summary: Devuelve una lista de todas las categorias
  *     tags: [Categoria]
  *     responses:
  *       200:
- *         description: Esta URL devuelve una lista de todas las Categorias en formato json
+ *         description: Devuelve una lista de todas las Categorias en formato JSON
  *         content:
  *           application/json:
  *             schema:
@@ -31,17 +31,17 @@ const {getCategorias, createCategoria, getCategoria, updateCategoria, deleteCate
  *             $ref: '#/components/schemas/Categoria'
  *     responses:
  *       200:
- *         description: Esta URL devuelve un mensaje indicando que se guardo correctamente. NOTA Remover paramentro 'id' es irrelevante.
+ *         description: Regresa un mensaje indicando que se guardo correctamente.
  *         content:
  *           application/json:
  *             schema:
- *               example: {message: 'Categoria Saved'}
+ *               example: {message: 'Categoria Guardada'}
  *       500:
  *         description: Some server error
  * 
  * /categorias/{id}:
  *   get:
- *     summary: Obtener Categoria por id
+ *     summary: Obtener categoria por ID
  *     tags: [Categoria]
  *     parameters:
  *       - in: path
@@ -49,18 +49,18 @@ const {getCategorias, createCategoria, getCategoria, updateCategoria, deleteCate
  *         schema:
  *           type: string
  *         required: true
- *         description: id de la Categoria
+ *         description: ID de la categoria
  *     responses:
  *       200:
- *         description: Esta URL devuelve la Categoria correspondiente al parametro id
+ *         description: Devuelve la categoria correspondiente al ID
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Categoria'
  *       404:
- *         description: The Categoria was not found
+ *         description: Categoria no encontrada
  *   put:
- *    summary: Modificar la Categoria
+ *    summary: Modificar la categoria
  *    tags: [Categoria]
  *    parameters:
  *      - in: path
@@ -68,7 +68,7 @@ const {getCategorias, createCategoria, getCategoria, updateCategoria, deleteCate
  *        schema:
  *          type: string
  *        required: true
- *        description: id de la Categoria
+ *        description: ID de la categoria
  *    requestBody:
  *      required: true
  *      content:
@@ -77,13 +77,13 @@ const {getCategorias, createCategoria, getCategoria, updateCategoria, deleteCate
  *            $ref: '#/components/schemas/Categoria'
  *    responses:
  *      200:
- *        description: Esta URL devuelve un mensaje si la Categoria fue modificada correctamente
+ *        description: Devuelve un mensaje si la categoria fue modificada correctamente.
  *        content:
  *          application/json:
  *             schema:
- *               example: {message: 'Categoria Updated'}
+ *               example: {message: 'Categoria Actualizada'}
  *      404:
- *        description: The Categoria was not found
+ *        description: Categoria no encontrada
  *      500:
  *        description: Some error happened
  *   delete:
@@ -95,17 +95,17 @@ const {getCategorias, createCategoria, getCategoria, updateCategoria, deleteCate
  *         schema:
  *           type: string
  *         required: true
- *         description: id de la Categoria
+ *         description: ID de la categoria
  *
  *     responses:
  *       200:
- *         description: Esta URL devuelve un mensaje si la Categoria pudo ser eliminada
+ *         description: Devuelve un mensaje si la categoria pudo ser eliminada
  *         content:
  *           application/json:
  *              schema:
- *                example: {message: 'Categoria Deleted'}
+ *                example: {message: 'Categoria Eliminada'}
  *       404:
- *         description: The Categoria was not found
+ *         description: Categoria no encontrada
  */
 // Aqui va el esquema
 /**

@@ -5,12 +5,12 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
 /**
  * @swagger
  * tags:
- *   name: RegistroVisita
+ *   name: RegistroVisitante
  *   description: El gestor de los Registros de Visita
  * /registro:
  *   get:
  *     summary: Devuelve una lista de todas los Registros
- *     tags: [RegistroVisita]
+ *     tags: [RegistroVisitante]
  *     responses:
  *       200:
  *         description: Esta URL devuelve una lista de todas los Registros en formato json
@@ -20,9 +20,11 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *               type: array
  *               items:
  *                 $ref: '#/components/schemas/RegistroVisita'
- *   post:
+ * 
+ * /registro/into:
+ *   get:
  *     summary: Crea una nuevo RegistroVisita
- *     tags: [RegistroVisita]
+ *     tags: [RegistroVisitante]
  *     requestBody:
  *       required: true
  *       content:
@@ -41,8 +43,8 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  * 
  * registro/{id}:
  *   get:
- *     summary: Obtener una lista de los lugares que recorrio el visitante.
- *     tags: [RegistroVisita]
+ *     summary: Obtener una lista de los lugares que recorrio el visitante por medio de su ID.
+ *     tags: [RegistroVisitante]
  *     parameters:
  *       - in: path
  *         name: id
@@ -59,9 +61,11 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *               $ref: '#/components/schemas/RegistroVisita'
  *       404:
  *         description: The RegistroVisita was not found
- *   put:
+ * 
+ * registro/out/{id}:
+ *   get:
  *    summary: Modificar el RegistroVisita
- *    tags: [RegistroVisita]
+ *    tags: [RegistroVisitante]
  *    parameters:
  *      - in: path
  *        name: id
@@ -86,9 +90,56 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *        description: The RegistroVisita was not found
  *      500:
  *        description: Some error happened
+ * 
+ * 
+ * visitante/{id}:
+ *   get:
+ *     summary: Obtener una lista de los lugares que recorrio el visitante por medio de su ID.
+ *     tags: [RegistroVisitante]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: id de la RegistroVisita
+ *     responses:
+ *       200:
+ *         description: Esta URL devuelve el RegistroVisita correspondiente al parametro id
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/RegistroVisita'
+ *       404:
+ *         description: The RegistroVisita was not found
+ * 
+ * place/{id}:
+ *    get:
+ *     summary: Obtener una lista de las personas que han visitado un lugar por su ID.
+ *     tags: [RegistroVisitante]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: ID del lugar
+ *     responses:
+ *       200:
+ *         description: Esta URL devuelve el RegistroVisita correspondiente al parametro id
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/RegistroVisita'
+ *       404:
+ *         description: The RegistroVisita was not found
+ * 
+ * registro/:{id}:
+ *   
+ * 
  *   delete:
  *     summary: Eliminar RegistroVisita
- *     tags: [RegistroVisita]
+ *     tags: [RegistroVisitante]
  *     parameters:
  *       - in: path
  *         name: id

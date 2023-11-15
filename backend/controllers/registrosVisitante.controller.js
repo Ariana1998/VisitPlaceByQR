@@ -248,7 +248,7 @@ let datos = {
 
   }
 
-  agregarRegistrosVisitante()
+//agregarRegistrosVisitante()
   
 
 module.exports = registrosVisitanteCtrl;

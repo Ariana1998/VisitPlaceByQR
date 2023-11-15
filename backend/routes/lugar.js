@@ -9,11 +9,11 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *   description: Encargado de gestionar los lugares y generar el codigo QR
  * /place:
  *   get:
- *     summary: Lista de las categorias para ver quien tiene permisos
+ *     summary: Se encarga de traer los lugares previamente creados.
  *     tags: [Lugar]
  *     responses:
  *       200:
- *         description: Devuelve una lista con las notas previamente creadas
+ *         description: Devuelve una lista con los lugares previamente creadas
  *         content:
  *           application/json:
  *             schema:
@@ -31,13 +31,14 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *             $ref: '#/components/schemas/Lugares'
  *     responses:
  *       200:
- *         description: Mensaje que indica que se creo una nota existosamente.
+ *         description: Mensaje que indica que se creo un lugar existosamente.
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Lugares'
  *       500:
  *         description: Some server error
+ * 
  * /place/{id}:
  *   get:
  *     summary: Trae el lugar por ID
@@ -48,16 +49,16 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *         schema:
  *           type: string
  *         required: true
- *         description: Trae nota por medio del ID
+ *         description: Trae un lugar por medio del ID
  *     responses:
  *       200:
- *         description: Devuelve la nota en base a su ID
+ *         description: Devuelve el lugar en base a su ID
  *         contens:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Lugares'
  *       404:
- *         description: La nota no fue encontrada
+ *         description: El lugar no fue encontrado
  *   put:
  *    summary: Actualiza el lugar por ID
  *    tags: [Lugar]
@@ -67,7 +68,7 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *        schema:
  *          type: string
  *        required: true
- *        description: La nota es actualizada
+ *        description: El lugar es actualizado
  *    requestBody:
  *      required: true
  *      content:
@@ -76,13 +77,13 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *            $ref: '#/components/schemas/Lugares'
  *    responses:
  *      200:
- *        description: Devuelve un mensaje notificando de que la nota se actualizo
+ *        description: Devuelve un mensaje notificando de que el lugar se actualizo
  *        content:
  *          application/json:
  *            schema:
  *              $ref: '#/components/schemas/Lugares'
  *      404:
- *        description: La nota no se encontro
+ *        description: El lugar no se encontro
  *      500:
  *        description: Some error happened
  *   delete:
@@ -94,13 +95,13 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *         schema:
  *           type: string
  *         required: true
- *         description: Elimina una nota en base al ID
+ *         description: Elimina el lugar en base al ID
  *
  *     responses:
  *       200:
- *         description: Devuelve un mensaje si la nota es eliminada
+ *         description: Devuelve un mensaje si el lugar es eliminado
  *       404:
- *         description: Nota no encontrada
+ *         description: Lugar no encontrado
  */
 /**
  * @swagger
