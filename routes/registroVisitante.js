@@ -74,18 +74,18 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *    summary: Modificar el registro de visitante
  *    tags: [RegistroVisitante]
  *    parameters:
- *      - in: path
- *        name: id
- *        schema:
- *          type: string
- *        required: true
- *        description: ID del Registro de Visitante
- *    requestBody:
- *      required: true
- *      content:
- *        application/json:
- *          schema:
- *            $ref: '#/components/schemas/RegistroVisita'
+ *       - in: query
+ *         name: lugar
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: id del lugar
+ *       - in: query
+ *         name: visitante
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: id del visitante
  *    responses:
  *      200:
  *        description: Devuelve un mensaje si el registro de visitante fue modificado correctamente
@@ -120,7 +120,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *       404:
  *         description: The RegistroVisita was not found
  * 
- * /api/place/{id}:
+ * /api/lugar/{id}:
  *    get:
  *     summary: Obtener una lista de las personas que han visitado un lugar por su ID.
  *     tags: [RegistroVisitante]
