@@ -75,7 +75,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *    tags: [RegistroVisitante]
  *    parameters:
  *       - in: path
- *         name: idRegistro
+ *         name: id
  *         schema:
  *           type: string
  *         required: true
