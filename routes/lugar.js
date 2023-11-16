@@ -39,7 +39,7 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *       500:
  *         description: Some server error
  * 
- * /api/lugar{id}:
+ * /api/lugar/{id}:
  *   get:
  *     summary: Trae el lugar por ID
  *     tags: [Lugar]
