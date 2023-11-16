@@ -7,7 +7,7 @@ const options = {
     openapi: "3.0.0",
     info: { title: "Visit Place By QR", version: "1.0.0" },
   },
-  apis: ["../backend/routes/administrador.js", "../backend/routes/categoria.js", "../backend/routes/lugar.js", "../backend/routes/registroVisitante.js" , "../backend/routes/visitante.js"],
+  apis: ["./routes/administrador.js", "./routes/categoria.js", "./routes/lugar.js", "./routes/registroVisitante.js" , "./routes/visitante.js"],
 };
 
 // Docs in JSON format
