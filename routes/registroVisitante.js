@@ -25,12 +25,19 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *   get:
  *     summary: Crea una nuevo registro de visitante
  *     tags: [RegistroVisitante]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/RegistroVisita'
+ *     parameters:
+ *       - in: query
+ *         name: lugar
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: id del lugar
+ *       - in: query
+ *         name: visitante
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: id del visitante
  *     responses:
  *       200:
  *         description: Devuelve un mensaje indicando que se guardo correctamente.
