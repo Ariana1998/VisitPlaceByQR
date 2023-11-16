@@ -167,7 +167,8 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *       required:
  *         - idVisitante
  *         - idLugar
- *         - fecha
+ *         - fechaEntrada
+ *         - fechaSalida
  *         - Entrada 
  *         - Salida
  *       properties:
