@@ -5,7 +5,7 @@ const {createAdministrador, login} = require('../controllers/administradores.con
  * @swagger
  * tags:
  *   name: Administradores
- *   description: Encargado de manejar los permisos en la API
+ *   description: Gestor de los administradores 
  * /administradores:
  *   post:
  *     summary: Crea un nuevo administrador
@@ -18,7 +18,7 @@ const {createAdministrador, login} = require('../controllers/administradores.con
  *             $ref: '#/components/schemas/Administrador'
  *     responses:
  *       200:
- *         description: Manda un mensaje donde avisa que se creo el usuario
+ *         description: Manda un mensaje donde avisa que se creo el administrador
  *         content:
  *           application/json:
  *             schema:
@@ -37,7 +37,7 @@ const {createAdministrador, login} = require('../controllers/administradores.con
  *             example: {"email":"Ariana@gmail.com", "password":"skajdñsdlkjdfñkldjaklsñdjs"}
  *     responses:
  *       200:
- *         description: Manda Si inicio sesión o no
+ *         description: Avisa si inicio sesión o no
  *         content:
  *           application/json:
  *             schema:

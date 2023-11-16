@@ -13,7 +13,7 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *     tags: [Visitante]
  *     responses:
  *       200:
- *         description: Se encarga de traer la lista de los usuarios
+ *         description: Se encarga de traer la lista de los visitantes
  *         content:
  *           application/json:
  *             schema:
@@ -48,7 +48,7 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *         schema:
  *           type: string
  *         required: true
- *         description: id del visitante
+ *         description: ID del visitante
  *     responses:
  *       200:
  *         description: Devuelve el visitante por su ID
@@ -57,7 +57,7 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *             schema:
  *               $ref: '#/components/schemas/Visitante'
  *       404:
- *         description: Visitante was not found
+ *         description: Visitante no fue encontrado
  *   delete:
  *     summary: Elimina el Visitante
  *     tags: [Visitante]
@@ -85,7 +85,7 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *             example: {"email":"Ariana@gmail.com", "password":"skajdñsdlkjdfñkldjaklsñdjs"}
  *     responses:
  *       200:
- *         description: Manda Si inicio sesión o no
+ *         description: Avisa si se inicio sesión o no
  *         content:
  *           application/json:
  *             schema:

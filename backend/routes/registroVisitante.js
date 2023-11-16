@@ -6,14 +6,14 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  * @swagger
  * tags:
  *   name: RegistroVisitante
- *   description: El gestor de los Registros de Visita
+ *   description: El gestor de los registros de los visitantes
  * /registro:
  *   get:
  *     summary: Devuelve una lista de todas los Registros
  *     tags: [RegistroVisitante]
  *     responses:
  *       200:
- *         description: Esta URL devuelve una lista de todas los Registros en formato json
+ *         description: Devuelve una lista de todas los registros en formato JSON
  *         content:
  *           application/json:
  *             schema:
@@ -23,7 +23,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  * 
  * /registro/into:
  *   get:
- *     summary: Crea una nuevo RegistroVisita
+ *     summary: Crea una nuevo registro de visitante
  *     tags: [RegistroVisitante]
  *     requestBody:
  *       required: true
@@ -33,11 +33,11 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *             $ref: '#/components/schemas/RegistroVisita'
  *     responses:
  *       200:
- *         description: Esta URL devuelve un mensaje indicando que se guardo correctamente. NOTA Remover paramentro 'id' es irrelevante.
+ *         description: Devuelve un mensaje indicando que se guardo correctamente.
  *         content:
  *           application/json:
  *             schema:
- *               example: {message: 'RegistroVisita Saved'}
+ *               example: {message: 'Registro de visitante guardado'}
  *       500:
  *         description: Some server error
  * 
@@ -54,17 +54,17 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *         description: id de la RegistroVisita
  *     responses:
  *       200:
- *         description: Esta URL devuelve el RegistroVisita correspondiente al parametro id
+ *         description: Devuelve el registro del visitante correspondiente al parametro id
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/RegistroVisita'
  *       404:
- *         description: The RegistroVisita was not found
+ *         description: Registro de visitante no encontrado.
  * 
  * registro/out/{id}:
  *   get:
- *    summary: Modificar el RegistroVisita
+ *    summary: Modificar el registro de visitante
  *    tags: [RegistroVisitante]
  *    parameters:
  *      - in: path
@@ -72,7 +72,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *        schema:
  *          type: string
  *        required: true
- *        description: id del RegistroVisita
+ *        description: ID del Registro de Visitante
  *    requestBody:
  *      required: true
  *      content:
@@ -81,13 +81,13 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *            $ref: '#/components/schemas/RegistroVisita'
  *    responses:
  *      200:
- *        description: Esta URL devuelve un mensaje si el RegistroVisita fue modificado correctamente
+ *        description: Devuelve un mensaje si el registro de visitante fue modificado correctamente
  *        content:
  *          application/json:
  *             schema:
- *               example: {message: 'RegistroVisita Updated'}
+ *               example: {message: 'Registro de visitante actualizado'}
  *      404:
- *        description: The RegistroVisita was not found
+ *        description: Registro de visitante no encontrado
  *      500:
  *        description: Some error happened
  * 
@@ -126,7 +126,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *         description: ID del lugar
  *     responses:
  *       200:
- *         description: Esta URL devuelve el RegistroVisita correspondiente al parametro id
+ *         description: Devuelve el historial por medio del ID
  *         content:
  *           application/json:
  *             schema:
@@ -136,9 +136,8 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  * 
  * registro/:{id}:
  *   
- * 
  *   delete:
- *     summary: Eliminar RegistroVisita
+ *     summary: Elimina el registro de visitante por ID
  *     tags: [RegistroVisitante]
  *     parameters:
  *       - in: path
@@ -146,17 +145,17 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *         schema:
  *           type: string
  *         required: true
- *         description: id del RegistroVisita
+ *         description: ID del RegistroVisita
  *
  *     responses:
  *       200:
- *         description: Esta URL devuelve un mensaje si el RegistroVisita pudo ser eliminado
+ *         description: Devuelve un mensaje si el registro visitante pudo ser eliminado
  *         content:
  *           application/json:
  *              schema:
- *                example: {message: 'RegistroVisita Deleted'}
+ *                example: {message: 'Registro del visitante eliminado'}
  *       404:
- *         description: The RegistroVisita was not found
+ *         description: Registro de visitante no encontrado
  */
 // Aqui va el esquema
 /**

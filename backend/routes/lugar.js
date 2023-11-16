@@ -6,7 +6,7 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  * @swagger
  * tags: 
  *   name: Lugar
- *   description: Encargado de gestionar los lugares y generar el codigo QR
+ *   description: Encargado de gestionar los lugares
  * /place:
  *   get:
  *     summary: Se encarga de traer los lugares previamente creados.
