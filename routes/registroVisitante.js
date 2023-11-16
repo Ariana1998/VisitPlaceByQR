@@ -77,7 +77,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *       - in: path
  *         name: idRegistro
  *         schema:
- *           type: id
+ *           type: string
  *         required: true
  *         description: id del registro
  *    responses:
