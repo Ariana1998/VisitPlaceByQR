@@ -112,7 +112,6 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *       required:
  *         - id
  *         - nombre
- *         - imageQrUrl
  *         - categoriasPermitidas
  *       properties:
  *         id:
@@ -121,16 +120,12 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *         nombre:
  *           type: string
  *           description: Nombre del lugar
- *         imageQrUrl:
- *           type: qr
- *           description: Codigo QR del lugar
  *         categoriasPermitidas:
  *           type: Categorias
  *           description: Categorias Permitidas en el lugar
  *       example:
  *         id: d5fE_asz
  *         nombre: Laboratorio 102
- *         imageQrUrl: imageQr
  *         categoriasPermitidas: estudiante
  */
 
