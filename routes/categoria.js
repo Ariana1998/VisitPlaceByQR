@@ -7,7 +7,7 @@ const {getCategorias, createCategoria, getCategoria, updateCategoria, deleteCate
  * tags:
  *   name: Categoria
  *   description: Gestor de las Categorias
- * /api/categorias:
+ * /api/categoria:
  *   get:
  *     summary: Devuelve una lista de todas las categorias
  *     tags: [Categoria]
@@ -39,7 +39,7 @@ const {getCategorias, createCategoria, getCategoria, updateCategoria, deleteCate
  *       500:
  *         description: Some server error
  * 
- * /api/categorias/{id}:
+ * /api/categoria/{id}:
  *   get:
  *     summary: Obtener categoria por ID
  *     tags: [Categoria]

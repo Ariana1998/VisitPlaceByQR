@@ -7,7 +7,7 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  * tags: 
  *   name: Lugar
  *   description: Encargado de gestionar los lugares
- * /api/place:
+ * /api/lugar:
  *   get:
  *     summary: Se encarga de traer los lugares previamente creados.
  *     tags: [Lugar]
@@ -39,7 +39,7 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *       500:
  *         description: Some server error
  * 
- * /api/place/{id}:
+ * /api/lugar{id}:
  *   get:
  *     summary: Trae el lugar por ID
  *     tags: [Lugar]
