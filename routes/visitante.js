@@ -7,7 +7,7 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  * tags:
  *   name: Visitante
  *   description: Encargado de gestionar los Visitantes
- * /visitante:
+ * /api/visitante:
  *   get:
  *     summary: Lista de todos los Visitantes
  *     tags: [Visitante]
@@ -38,7 +38,7 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *               $ref: '#/components/schemas/Visitante'
  *       500:
  *         description: Some server error
- * /visitante/{id}:
+ * /api/visitante/{id}:
  *   get:
  *     summary: Obtener a un visitante por medio de su ID
  *     tags: [Visitante]
@@ -73,7 +73,7 @@ const {getVisitante,getVisitantes,createVisitante, deleteVisitante, login} = req
  *         description: El Visitante fue eliminado
  *       404:
  *         description: Visitante no encontrado
- * /visitante/login:
+ * /api/visitante/login:
  *   post:
  *     summary: Inicia Sesión
  *     tags: [Visitante]
