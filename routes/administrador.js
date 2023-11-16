@@ -6,7 +6,7 @@ const {createAdministrador, login} = require('../controllers/administradores.con
  * tags:
  *   name: Administradores
  *   description: Gestor de los administradores 
- * /api/administradores:
+ * /api/administrador:
  *   post:
  *     summary: Crea un nuevo administrador
  *     tags: [Administradores]
@@ -25,7 +25,7 @@ const {createAdministrador, login} = require('../controllers/administradores.con
  *               $ref: '#/components/schemas/Administrador'
  *       500:
  *         description: Some server error
- * /api/administradores/login:
+ * /api/administrador/login:
  *   post:
  *     summary: Iniciar Sesión
  *     tags: [Administradores]
