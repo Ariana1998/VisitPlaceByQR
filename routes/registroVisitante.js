@@ -74,18 +74,12 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *    summary: Modificar el registro de visitante
  *    tags: [RegistroVisitante]
  *    parameters:
- *       - in: query
- *         name: lugar
+ *       - in: path
+ *         name: idRegistro
  *         schema:
  *           type: string
  *         required: true
- *         description: id del lugar
- *       - in: query
- *         name: visitante
- *         schema:
- *           type: string
- *         required: true
- *         description: id del visitante
+ *         description: id del registro
  *    responses:
  *      200:
  *        description: Devuelve un mensaje si el registro de visitante fue modificado correctamente
