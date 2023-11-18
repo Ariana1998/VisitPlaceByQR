@@ -38,27 +38,27 @@ const {getLugares, createLugar, getLugar, updateLugar, deleteLugar} = require('.
  *               $ref: '#/components/schemas/Lugares'
  *       500:
  *         description: Some server error
- * 
+ *    
  * /api/lugar/{id}:
  *   get:
- *     summary: Trae el lugar por ID
- *     tags: [Lugar]
- *     parameters:
- *       - in: path
- *         name: id
- *         schema:
- *           type: string
- *         required: true
- *         description: Trae un lugar por medio del ID
- *     responses:
- *       200:
- *         description: Devuelve el lugar en base a su ID
- *         contens:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Lugares'
- *       404:
- *         description: El lugar no fue encontrado
+ *    summary: Trae el lugar por ID
+ *    tags: [Lugar]
+ *    parameters:
+ *      - in: path
+ *        name: id
+ *        schema:
+ *          type: string
+ *        required: true
+ *        description: Trae un lugar por medio del ID
+ *    responses:
+ *      200:
+ *        description: Devuelve el lugar en base a su ID
+ *        contens:
+ *          application/json:
+ *            schema:
+ *              $ref: '#/components/schemas/Lugares'
+ *      404:
+ *        description: El lugar no fue encontrado
  *   put:
  *    summary: Actualiza el lugar por ID
  *    tags: [Lugar]

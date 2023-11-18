@@ -93,7 +93,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *        description: Some error happened
  * 
  * 
- * /api/visitante/{id}:
+ * /api/registro/visitante/{id}:
  *   get:
  *     summary: Obtener una lista de los lugares que recorrio el visitante por medio de su ID.
  *     tags: [RegistroVisitante]
@@ -114,7 +114,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *       404:
  *         description: The RegistroVisita was not found
  * 
- * /api/lugar/{id}:
+ * /api/registro/lugar/{id}:
  *    get:
  *     summary: Obtener una lista de las personas que han visitado un lugar por su ID.
  *     tags: [RegistroVisitante]
