@@ -135,7 +135,7 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *       404:
  *         description: The RegistroVisita was not found
  * 
- * /api/registro/:{id}:
+ * /api/registro/{id}:
  *   
  *   delete:
  *     summary: Elimina el registro de visitante por ID
