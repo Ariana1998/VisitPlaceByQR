@@ -69,6 +69,27 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *       404:
  *         description: Registro de visitante no encontrado.
  * 
+ *   delete:
+ *     summary: Elimina el registro de visitante por ID
+ *     tags: [RegistroVisitante]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: ID del RegistroVisita
+ *
+ *     responses:
+ *       200:
+ *         description: Devuelve un mensaje si el registro visitante pudo ser eliminado
+ *         content:
+ *           application/json:
+ *              schema:
+ *                example: {message: 'Registro del visitante eliminado'}
+ *       404:
+ *         description: Registro de visitante no encontrado
+ * 
  * /api/registro/out/{id}:
  *   get:
  *    summary: Modificar el registro de visitante
@@ -134,29 +155,6 @@ const { getRegistrosVisitantes, createRegistroVisitante, getRegistroVisitante, u
  *               $ref: '#/components/schemas/RegistroVisita'
  *       404:
  *         description: The RegistroVisita was not found
- * 
- * /api/registro/{id}:
- *   
- *   delete:
- *     summary: Elimina el registro de visitante por ID
- *     tags: [RegistroVisitante]
- *     parameters:
- *       - in: path
- *         name: id
- *         schema:
- *           type: string
- *         required: true
- *         description: ID del RegistroVisita
- *
- *     responses:
- *       200:
- *         description: Devuelve un mensaje si el registro visitante pudo ser eliminado
- *         content:
- *           application/json:
- *              schema:
- *                example: {message: 'Registro del visitante eliminado'}
- *       404:
- *         description: Registro de visitante no encontrado
  */
 // Aqui va el esquema
 /**
